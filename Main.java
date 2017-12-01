@@ -22,17 +22,17 @@
  */
 class Main {
 
-	public static void main(String[] args) {
-		// Read msg from input files
-		MsgPool msgPool = ReaderHelper.read();
+    public static void main(String[] args) {
+        // Read msg from input files
+        MsgPool msgPool = ReaderHelper.read();
 
-		// Interactive interface for user
-		Cmd cmd = new Cmd(msgPool);
-		cmd.start();
+        // Interactive interface for user
+        Cmd cmd = new Cmd(msgPool);
+        cmd.start();
 
-		// Print summary
-		cmd.summary();
+        // Print summary
+        cmd.summary();
 
-		return;
-	}
+        return;
+    }
 }
