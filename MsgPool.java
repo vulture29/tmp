@@ -26,10 +26,12 @@ class MsgPool {
 			for(Message msg : loopMsgList) {
 	        	if(msg.contains(word)) { 
 	        		// update matchTimeMap
-	        		if(matchTimeMap.containsKey(filename))
+	        		if(matchTimeMap.containsKey(filename)) {
 	        			matchTimeMap.put(filename, matchTimeMap.get(filename)+1);
-	        		else
+	        		}
+	        		else {
 	        			matchTimeMap.put(filename, 1);
+	        		}
 
 	        		// update msgMap
 	        		retMsgList.add(msg);

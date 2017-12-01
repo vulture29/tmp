@@ -1,0 +1,9 @@
+The program can work well in Java 8 environment.
+
+Running instruction:
+
+the input files should inside the "input" directory, which is located in the same directory of the application.
+Run the command to compile and run the application:
+
+javac Main.java
+java Main
