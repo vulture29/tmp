@@ -17,13 +17,15 @@
 // 2) A readme with instructions on how to build and run the application.
 // 3) A test folder with at least 1 sample input file showing your application works.
 
-
+/**
+ * The entry of the application
+ */
 class Main {
 
 	public static void main(String[] args) {
-        // Read msg from input files
-		MsgPool msgPool = ReaderHelper.readFromFile();
-        
+		// Read msg from input files
+		MsgPool msgPool = ReaderHelper.read();
+
 		// Interactive interface for user
 		Cmd cmd = new Cmd(msgPool);
 		cmd.start();
@@ -32,5 +34,5 @@ class Main {
 		cmd.summary();
 
 		return;
-    }
+	}
 }

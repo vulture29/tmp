@@ -1,17 +1,25 @@
 import java.io.*;
 import java.util.*;
 
+/**
+ * This is a helper class that can handle the reading action to files
+ */
 class ReaderHelper {
-
-  	// Input: Folder name
-	// Output: Arrary of File inside the folder
+	/**
+	 * get all files in a folder
+	 * @param  String folderName    Folder name
+	 * @return        Arrary of File inside the folder
+	 */
 	public static File[] getFilesFromFolder(String folderName) {
 		File folder = new File(folderName);
 		return folder.listFiles();
 	}
 
-  	// Input: File to be read
-  	// Output: List of Message inside the file
+	/**
+	* read strings in one file and get a list of Message from it
+	* @param  File file          File to be read
+	* @return      List of Message inside the file
+	*/
 	public static List<Message> readFromFile(File file) {
 		List<Message> msgList = new LinkedList<Message>();
 
@@ -34,9 +42,11 @@ class ReaderHelper {
 		return msgList;
 	}
 
-	// Input: void
-	// Output: MsgPool from files
-	public static MsgPool readFromFile() {
+	/**
+	 * read action
+	 * @return MsgPool from files
+	 */
+	public static MsgPool read() {
 		// get folder name
 		Scanner scanner = new Scanner(System.in);
 
@@ -47,8 +57,8 @@ class ReaderHelper {
 			System.exit(0);
 		}
 
-        // extract and store messages from files
-        MsgPool msgPool = new MsgPool();
+		// extract and store messages from files
+		MsgPool msgPool = new MsgPool();
 		for (File file : listOfFiles) {
 			String fileName = file.getName();
 			List<Message> msgList = ReaderHelper.readFromFile(file);
